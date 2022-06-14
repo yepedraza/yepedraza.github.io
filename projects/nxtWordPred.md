@@ -13,14 +13,16 @@ labels:
 summary: "Next word prediction using NLP and LSTM neural networks."
 ---
 
-Vacay is a web application that I helped create as a team project in ICS 415, Spring 2015. The project helped me learn how to design and implement a responsive web site.
+I developed this project as part of the need to learn more about the NPL. This is the result of my self-study through Keras documentation, Data Science forums, and educational content on the web.
 
-Vacay is implemented using [Meteor](http://meteor.com), a JavaScript application platform. Within two weeks, we created a website that implements several types of reservations including flights, hotels, and car rentals.
+Particularly, use of neural networks to analyze text draws my attention, since it opens up a world of possibilities for the analysis of data that can be found, for example, in social networks, forums, newspapers, etc. That's why I decided to venture a little into text processing with neural networks through this project. Personally, this work helped me to become more interested and involved in Deep Learning applications to solve problems with text data.
 
-In this project I gained experience with full-stack web application design and associated technologies, including [MongoDB](http://mongodb.com) for database storage, the [Twitter Bootstrap](http://getbootstrap.com/) CSS Framework for the user interface, and Javascript for both client and server-side programming. 
+## Project Description
 
-Here is some example code to illustrate Simple Schema use:
+Through the use of natural language processing and deep learning methods, I made a model that is capable of predicting the next word of a particular sentence. From the reading of the text from the book [Metamorphosis](https://www.gutenberg.org/cache/epub/5200/pg5200.txt) by Franz Kafka found in Project Gutenberg, the construction of a deep neural network is used with recurrent neural networks (LSTM).
 
-{% gist 9defa1fb3f4eb593ba5fa9eacedca960 %}
+### Data preprocessing
+Empiezo el preprocesamiento de datos tomando el texto original y eliminándole información extra e innecesaria para el entrenamiento, guardándolo en un archivo nuevo. Luego leo el texto usando el utf8 encoding.
+{% gist c71de7e84739b0ca1fbdd26fe142c2d0 %}
  
 Source: <a href="https://github.com/theVacay/vacay">theVacay/vacay</a>
