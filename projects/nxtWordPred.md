@@ -39,7 +39,7 @@ I use Tokenizer to vectorize the text and then transform it into a sequence of n
 
 {% gist e66c897bf4500338dcc175a109120d48 %}
 
-Then I find the size of the *word index* to later use it as a criterion to convert the output data into categorical variables and create the input and output data of the model with the text sequences before the creation of data sequences
+Then I find the size of the *word index* to later use it as a criterion to convert the output data into categorical variables and next I create the input and output data of the model with the text sequences before the creation of data sequences
 
 {% gist 46192b0bcf326e836715b6b5e9728a2a %}
 
@@ -47,4 +47,16 @@ Finally I convert the output data to categorical variables
 
 {% gist 180b84bd2e30e1055053f4bdc89f1ab6 %}
 
-Source: <a href="https://github.com/theVacay/vacay">theVacay/vacay</a>
+### Model Creation
+The model architecture is the following:
+  * Input Embedding layer
+  * Two LSTM layers
+  * A fully connected layer and,
+  * An output layer
+
+The model has 15,7M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1JX7TPaFdbUDP95Jwxpf5MbWUIis97Oj3/view?usp=sharing)
+
+Finally, I obtained a model with 57% accuracy in prediction and with a categorical error of 0.6163. You can see detaily the codes and documentation in this [Repo](https://github.com/yepedraza/nextword-predict). For the prediction of the model I created a [notebook](https://github.com/yepedraza/nextword-predict/blob/80307bdc413d959ab60544853bc9f9044ca28872/predScript.ipynb) that has the following characteristics:
+  * Model and tokenizer file uploading
+  * Use of tokenizer for the input sentences for which we should make the predictions on
+  * Make predictions on the input sentence by using the saved model
