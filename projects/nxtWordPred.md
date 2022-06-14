@@ -54,9 +54,10 @@ The model architecture is the following:
   * A fully connected layer and,
   * An output layer
 
-The model has 15,7M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1JX7TPaFdbUDP95Jwxpf5MbWUIis97Oj3/view?usp=sharing)
-
+The model has 15,7M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1hPjFniCR8w5yUMrN1-oRjmRPusC7yJfD/view?usp=sharing)
 Finally, I obtained a model with 57% accuracy in prediction and with a categorical error of 0.6163. You can see detaily the codes and documentation in this [Repo](https://github.com/yepedraza/nextword-predict). For the prediction of the model I created a [notebook](https://github.com/yepedraza/nextword-predict/blob/80307bdc413d959ab60544853bc9f9044ca28872/predScript.ipynb) that has the following characteristics:
   * Model and tokenizer file uploading
   * Use of tokenizer for the input sentences for which we should make the predictions on
   * Make predictions on the input sentence by using the saved model
+---
+*made by @yepedraza*
