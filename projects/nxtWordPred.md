@@ -30,8 +30,21 @@ I add each text lines in a list and join the lines of text removing related elem
 
 {% gist 0e14342bf7a667d95a7cb6bb00134d5c %}
 
-And I make sure I don't have repeated words
+And make sure I don't have repeated words
 
 {% gist eab2fcf51f70603ad14ed6520f4fe66c %}
- 
+
+### Tokenization
+I use Tokenizer to vectorize the text and then transform it into a sequence of numbers
+
+{% gist e66c897bf4500338dcc175a109120d48 %}
+
+Then I find the size of the *word index* to later use it as a criterion to convert the output data into categorical variables and create the input and output data of the model with the text sequences before the creation of data sequences
+
+{% gist 46192b0bcf326e836715b6b5e9728a2a %}
+
+Finally I convert the output data to categorical variables
+
+{% gist 180b84bd2e30e1055053f4bdc89f1ab6 %}
+
 Source: <a href="https://github.com/theVacay/vacay">theVacay/vacay</a>
