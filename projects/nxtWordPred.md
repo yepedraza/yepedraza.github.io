@@ -59,5 +59,4 @@ Finally, I obtained a model with 57% accuracy in prediction and with a categoric
   * Model and tokenizer file uploading
   * Use of tokenizer for the input sentences for which we should make the predictions on
   * Make predictions on the input sentence by using the saved model
----
-*made by @yepedraza*
+
