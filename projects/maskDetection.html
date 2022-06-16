@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Mask detection | Yery Pedraza | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://yepedraza.github.io/img/image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yery Pedraza | Professional Portfolio">
+    <meta property="og:url" content="https://yepedraza.github.io/projects/maskDetection.html">
+    <meta property="og:title" content="Mask detection | Yery Pedraza | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/yepedraza.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Mask detection | Yery Pedraza | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Yery Pedraza</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Book reviews</a>
+        <a class="nav-link" href="/bio/">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Mask detection</h1>
+ <p>With the advances that neural networks have had lately and specifically convolutional neural networks, and the situation that the planet has been presenting; I have realized the importance of the field of computer vision to apply it to the specific detection of “something”. In this case, that something is the mask, a vital element today, that detection could be very useful from now on.</p>
+
+<h2 id="project-description">Project Description</h2>
+<p>Through the use of convolutional neural networks, I made a model that it’s capable of detecting by reading an image if a person is wearing a face mask or not. The database I’m using contains about 6400 images of people. Each of these images also has a JSON type file that indicates many of its characteristics, being “class_name” the one that indicates the types of accessories that the people in the image are wearing (where we’re going to classify if they’re wearing a mask or not). The objective of this project is to apply CNN for a possible tool that uses computer vision and artificial intelligence to prevent infections in closed spaces.</p>
+
+<h3 id="data-preprocessing">Data preprocessing</h3>
+<p>First I made a function for retrieve the JSON file containing the bounding box data in the training dataset, then I explored the JSON data provided for the training</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/823bddfd9d518e49288ddc2876f4dbed.js"> </script>
+
+<p>I looked the amount of labeled data for each category</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/39ec0d2626583c5e1eeb1349c3923978.js"> </script>
+
+<p><img class="img-fluid" src="../img/faceMask/labeled_data.png" /></p>
+
+<p>Next I created the input and output data of the model</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/b0653f597facb28625bb1d777f55cd4c.js"> </script>
+
+<h3 id="model-creation">Model Creation</h3>
+<p>The model architecture is the following:</p>
+
+<p><img class="img-fluid" src="../img/faceMask/model.png" /></p>
+
+<p>The model has 23M training parameters aprox and you can download it <a href="https://drive.google.com/file/d/1oLV40ere7hftzJzp2v2hInLxv9cE90i0/view?usp=sharing">here</a>. Finally, I obtained a model with 94.78% accuracy in prediction and with an error of 0.1541.</p>
+
+<p><img class="img-fluid" width="450" height="350" src="../img/faceMask/model_accuracy.png" />
+<img class="img-fluid" width="450" height="350" src="../img/faceMask/model_loss.png" /></p>
+
+<p>You can see detaily the codes and documentation in this <a href="https://github.com/yepedraza/mask-detection">Repo</a>. Thanks for reading 😄</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

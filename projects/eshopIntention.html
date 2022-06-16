@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="E-Shop Intention | Yery Pedraza | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://yepedraza.github.io/img/image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yery Pedraza | Professional Portfolio">
+    <meta property="og:url" content="https://yepedraza.github.io/projects/eshopIntention.html">
+    <meta property="og:title" content="E-Shop Intention | Yery Pedraza | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/yepedraza.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>E-Shop Intention | Yery Pedraza | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Yery Pedraza</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Book reviews</a>
+        <a class="nav-link" href="/bio/">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">E-Shop Intention</h1>
+ <p>The importance of data analysis in companies has become crucial to improve sales and understand customers, to this has been added the power to have statistical information on our websites and with them improve the customer experience. In this project, I have analyzed through these data about the online purchase intention of people.</p>
+
+<h2 id="project-description">Project Description</h2>
+
+<p>From a dataset that consists of statistical characteristics of about 12,000 sessions on online sales websites, I carried out an analysis of the purchase intention that a person could have in a virtual way and how we could predict the behavior of users. This <a href="https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset">dataset</a> was created and hosted in the UCI Machine Learning Repository.</p>
+
+<h3 id="data-exploration">Data exploration</h3>
+<p>I start the data exploration reading the dataset, then I looked for missing values. Finally I took related bounce rates of customers.</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/e28d7a082e0a5378020f436875f18ac1.js"> </script>
+
+<h3 id="machine-learning-algorithms">Machine Learning algorithms</h3>
+
+<p>Next I used K-elbow method to determine clusters</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/316b60e786bfca76aeb9bd0ed23d6e36.js"> </script>
+
+<p>The number of optimal clustering groups for the duration of the product and the bounce rates is 2 as you can see in the next graph:</p>
+
+<p><img class="img-fluid" width="450" height="350" src="../img/eshopIntention/elbow.png" /></p>
+
+<p>I applied the K Means method to find the clusters</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/439351a25042f723a64cd308f0903f9a.js"> </script>
+
+<p><img class="img-fluid" src="../img/eshopIntention/cluster.png" /></p>
+
+<p>Next I got predicted clustering result label and plotted the normalized and non-normalized confusion matrix for predictions</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/144a1cc017d55705e2ecdcb1c33a625d.js"> </script>
+
+<p><img class="img-fluid" width="450" height="350" src="../img/eshopIntention/confusion.png" /></p>
+
+<p><img class="img-fluid" width="450" height="350" src="../img/eshopIntention/confusion_n.png" /></p>
+
+<h3 id="final-analysis">Final analysis</h3>
+
+<p>From the confusion matrix, we can see that out of 10,422 failed incomes, 9,769 are grouped into uninterested customers or 94%. However, out of 937 successful incomes, only 284 are grouped as target customers or 15%. Also, the adjusted index score is not very high.</p>
+
+<p>So it is clear that I have poorly bundled many successful revenue sessions as uninterested customers, which means when the high bounce rate combined with a short product-related page duration, there are still a lot of customers.</p>
+
+<p>Thanks for reading! 😄</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

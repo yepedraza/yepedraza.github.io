@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Next Word Prediction | Yery Pedraza | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://yepedraza.github.io/img/image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yery Pedraza | Professional Portfolio">
+    <meta property="og:url" content="https://yepedraza.github.io/projects/nxtWordPred.html">
+    <meta property="og:title" content="Next Word Prediction | Yery Pedraza | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://github.com/yepedraza.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Next Word Prediction | Yery Pedraza | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Yery Pedraza</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Book reviews</a>
+        <a class="nav-link" href="/bio/">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Next Word Prediction</h1>
+ <p>I developed this project as part of the need to learn more about the NPL. This is the result of my self-study through Keras documentation, Data Science forums, and educational content on web.</p>
+
+<p>Particularly, use of neural networks to analyze text draws my attention, since it opens up a world of possibilities for the analysis of data that can be found, for example, in social networks, forums, newspapers, etc. That’s why I decided to venture a little into text processing with neural networks through this project. Personally, this work helped me to become more interested and involved in Deep Learning applications to solve problems with text data.</p>
+
+<h2 id="project-description">Project Description</h2>
+
+<p>Through use of natural language processing and deep learning methods, I made a model that is capable of predicting the next word of a particular sentence. From the reading of the text from the book <a href="https://www.gutenberg.org/cache/epub/5200/pg5200.txt">Metamorphosis</a> by Franz Kafka found in Project Gutenberg, the construction of a deep neural network was used with recurrent neural networks (LSTM).</p>
+
+<h3 id="data-preprocessing">Data preprocessing</h3>
+<p>I started the data preprocessing taking the original text and removing extra and unnecessary information for training, saving it in a new file. Then I read the text using utf8 encoding.</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/66707443fcd44b17b01cfc125d920f0a.js"> </script>
+
+<p>I added each text lines in a list and joined the lines of text removing related elements of unnecessary lines of text</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/0e14342bf7a667d95a7cb6bb00134d5c.js"> </script>
+
+<p>And made sure I don’t have repeated words</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/eab2fcf51f70603ad14ed6520f4fe66c.js"> </script>
+
+<h3 id="tokenization">Tokenization</h3>
+<p>I used Tokenizer to vectorize the text and then transform it into a sequence of numbers</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/e66c897bf4500338dcc175a109120d48.js"> </script>
+
+<p>Then I found the size of the <em>word index</em> to later use it as a criterion to convert the output data into categorical variables and next I created the input and output data of the model with the text sequences before the creation of data sequences</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/46192b0bcf326e836715b6b5e9728a2a.js"> </script>
+
+<p>Finally I converted the output data to categorical variables</p>
+
+<noscript><pre>400: Invalid request</pre></noscript>
+<script src="https://gist.github.com/180b84bd2e30e1055053f4bdc89f1ab6.js"> </script>
+
+<h3 id="model-creation">Model Creation</h3>
+<p>The model architecture is the following:</p>
+<ul>
+  <li>Input Embedding layer</li>
+  <li>Two LSTM layers</li>
+  <li>A fully connected layer and,</li>
+  <li>An output layer</li>
+</ul>
+
+<p>The model has 15,7M training parameters aprox and you can download it <a href="https://drive.google.com/file/d/1hPjFniCR8w5yUMrN1-oRjmRPusC7yJfD/view?usp=sharing">here</a>
+Finally, I obtained a model with 57% accuracy in prediction and with a categorical error of 0.6163. You can see detaily the codes and documentation in this <a href="https://github.com/yepedraza/nextword-predict">Repo</a>. For the prediction of the model I created a <a href="https://github.com/yepedraza/nextword-predict/blob/80307bdc413d959ab60544853bc9f9044ca28872/predScript.ipynb">notebook</a> that has the following characteristics:</p>
+<ul>
+  <li>Model and tokenizer file uploading</li>
+  <li>Use tokenizer for the input sentences for which we should make the predictions on</li>
+  <li>Make predictions on the input sentence by using the saved model</li>
+</ul>
+
+<p>Thanks for reading 😄</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "basics": {
+    "name": "Yery Pedraza",
+    "label": "Mechatronic/Machine Learning Jr Engineer",
+    "picture": "https://github.com/yepedraza.png",
+    "email": "yery.pedraza523@gmail.com",
+    "phone": "(+57)322-321-9653",
+    "website": "https://linktr.ee/yepedraza",
+    "summary": "I am mechatronic engineer finishing my degree work based in Artificial Intelligence using neural networks. I finished my studies at the Universidad Militar Nueva Granada. A deep learning enthusiast who learns every day.",
+    "location": { "address": "", "postalCode": "", "city": "Bogotá", "countryCode": "", "region": "Colombia" },
+    "profiles": [
+      { "network": "github", "username": "yepedraza", "url": "http://github.com/yepedraza" },
+      { "network": "linkedin", "username": "yepedraza", "url": "http://linkedin.com/in/yepedraza" },
+      { "network": "twitter", "username": "yepedraza", "url": "http://twitter.com/yepedraza" },
+      { "network": "instagram", "username": "yepedraza", "url": "http://instagram.com/yepedraza" }
+    ]
+  },
+  "interests": [
+    { "name": "Artificial Intelligence" },
+    { "name": "Data Science" },
+    { "name": "Machine/Deep Learning" },
+    { "name": "Computer Vision" },
+    { "name": "Natural Language Processing" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "Python", "Pandas", "NumPy", "Tensorflow", "Scikit-Learn", "Matplotlib", "Seaborn" ]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "VSCode", "Jupyter-NB", "Google Colab", "Git/GitHub", "MarkDown", "Latex", "Notion", "Trello" ]
+    },
+    {
+      "name": "Soft Skills",
+      "keywords": [ "Adaptability", "Communication", "Leadership", "Order", "Critical thinking", "Punctuality" ]
+    },
+    {
+      "name": "Communication",
+      "keywords": [ "Spanish", "English (B2)" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Militar Nueva Granada",
+      "area": "Mechatronics engineering",
+      "studyType": "",
+      "startDate": "2017",
+      "endDate": "2022",
+      "courses": [
+      ]
+    }
+  ]
+}
