@@ -37,9 +37,9 @@ The model architecture is the following:
 
 <img class="img-fluid" src="../img/faceMask/model.png">
 
-The model has 23M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1oLV40ere7hftzJzp2v2hInLxv9cE90i0/view?usp=sharing). Finally, I obtained a model with 94.78% accuracy in prediction and with anerror of 0.1541.(https://github.com/yepedraza/mask-detection).
+The model has 23M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1oLV40ere7hftzJzp2v2hInLxv9cE90i0/view?usp=sharing). Finally, I obtained a model with 94.78% accuracy in prediction and with an error of 0.1541.
 
 <img class="img-fluid" width="450" height="350" src="../img/faceMask/model_accuracy.png">
 <img class="img-fluid" width="450" height="350" src="../img/faceMask/model_loss.png">
 
-You can see detaily the codes and documentation in this [Repo]. Thanks for reading 😄
+You can see detaily the codes and documentation in this [Repo](https://github.com/yepedraza/mask-detection). Thanks for reading 😄
