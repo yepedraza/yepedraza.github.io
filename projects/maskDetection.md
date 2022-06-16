@@ -27,3 +27,19 @@ I looked the amount of labeled data for each category
 {% gist 39ec0d2626583c5e1eeb1349c3923978 %}
 
 <img class="img-fluid" src="../img/faceMask/labeled_data.png">
+
+Next I created the input and output data of the model
+
+{% gist b0653f597facb28625bb1d777f55cd4c %}
+
+### Model Creation
+The model architecture is the following:
+
+<img class="img-fluid" src="../img/faceMask/model.png">
+
+The model has 23M training parameters aprox and you can download it [here](https://drive.google.com/file/d/1oLV40ere7hftzJzp2v2hInLxv9cE90i0/view?usp=sharing). Finally, I obtained a model with 94.78% accuracy in prediction and with anerror of 0.1541.(https://github.com/yepedraza/mask-detection).
+
+<img class="img-fluid" width="450" height="350" src="../img/faceMask/model_accuracy.png">
+<img class="img-fluid" width="450" height="350" src="../img/faceMask/model_loss.png">
+
+You can see detaily the codes and documentation in this [Repo]. Thanks for reading 😄
