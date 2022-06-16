@@ -22,28 +22,28 @@ Particularly, use of neural networks to analyze text draws my attention, since i
 Through use of natural language processing and deep learning methods, I made a model that is capable of predicting the next word of a particular sentence. From the reading of the text from the book [Metamorphosis](https://www.gutenberg.org/cache/epub/5200/pg5200.txt) by Franz Kafka found in Project Gutenberg, the construction of a deep neural network was used with recurrent neural networks (LSTM).
 
 ### Data preprocessing
-I start the data preprocessing taking the original text and removing extra and unnecessary information for training, saving it in a new file. Then I read the text using utf8 encoding.
+I started the data preprocessing taking the original text and removing extra and unnecessary information for training, saving it in a new file. Then I read the text using utf8 encoding.
 
 {% gist 66707443fcd44b17b01cfc125d920f0a %}
 
-I add each text lines in a list and join the lines of text removing related elements of unnecessary lines of text
+I added each text lines in a list and joined the lines of text removing related elements of unnecessary lines of text
 
 {% gist 0e14342bf7a667d95a7cb6bb00134d5c %}
 
-And make sure I don't have repeated words
+And made sure I don't have repeated words
 
 {% gist eab2fcf51f70603ad14ed6520f4fe66c %}
 
 ### Tokenization
-I use Tokenizer to vectorize the text and then transform it into a sequence of numbers
+I used Tokenizer to vectorize the text and then transform it into a sequence of numbers
 
 {% gist e66c897bf4500338dcc175a109120d48 %}
 
-Then I find the size of the *word index* to later use it as a criterion to convert the output data into categorical variables and next I create the input and output data of the model with the text sequences before the creation of data sequences
+Then I found the size of the *word index* to later use it as a criterion to convert the output data into categorical variables and next I created the input and output data of the model with the text sequences before the creation of data sequences
 
 {% gist 46192b0bcf326e836715b6b5e9728a2a %}
 
-Finally I convert the output data to categorical variables
+Finally I converted the output data to categorical variables
 
 {% gist 180b84bd2e30e1055053f4bdc89f1ab6 %}
 
@@ -60,3 +60,4 @@ Finally, I obtained a model with 57% accuracy in prediction and with a categoric
   * Use tokenizer for the input sentences for which we should make the predictions on
   * Make predictions on the input sentence by using the saved model
 
+Thanks for reading 😄
